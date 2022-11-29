@@ -34,9 +34,9 @@ function App() {
                 <div>
                     <input type="range" id={`priority-${index}`} name={`priority-${index}`}
                         min="0" max="100" value={task.priority === "high" ? 100 : 0} step="100"
-                        onClick={() => { changePriority(index) }}>
+                        onChange={() => { changePriority(index) }}>
                     </input>
-                    <label for={`priority-${index}`}>{ task.priority[0].toUpperCase() + task.priority.slice(1) }</label>
+                    <label htmlFor={`priority-${index}`}>{ task.priority[0].toUpperCase() + task.priority.slice(1) }</label>
                 </div>
 
 
@@ -69,9 +69,9 @@ function App() {
                 <textarea id="new-task" value={newTask} onChange={handleTextChange} lines="3"></textarea>
 
                 <input type="radio" id="high" name="priority" value="high" checked={newPriority === "high"} onChange={handlePriorityChange}></input>
-                <label for="high">High</label>
+                <label htmlFor="high">High</label>
                 <input type="radio" id="low" name="priority" value="low" checked={newPriority === "low"} onChange={handlePriorityChange}></input>
-                <label for="low">Low</label>
+                <label htmlFor="low">Low</label>
 
                 <input type="submit" value="Save new task"></input>
             </form>
