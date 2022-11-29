@@ -68,9 +68,9 @@ function App() {
                 <label htmlFor="new-task">Add new task</label>
                 <textarea id="new-task" value={newTask} onChange={handleTextChange} lines="3"></textarea>
 
-                <input type="radio" id="high" name="priority" value="high" checked={newPriority === "high" ? "checked" : ""} onChange={handlePriorityChange}></input>
+                <input type="radio" id="high" name="priority" value="high" checked={newPriority === "high"} onChange={handlePriorityChange}></input>
                 <label for="high">High</label>
-                <input type="radio" id="low" name="priority" value="low" checked={newPriority === "low" ? "checked" : ""} onChange={handlePriorityChange}></input>
+                <input type="radio" id="low" name="priority" value="low" checked={newPriority === "low"} onChange={handlePriorityChange}></input>
                 <label for="low">Low</label>
 
                 <input type="submit" value="Save new task"></input>
